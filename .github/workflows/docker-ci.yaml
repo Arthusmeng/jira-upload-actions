@@ -31,4 +31,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: arthusmeng/jira-upload-actions:latest
+          tags: arthusmeng/jira-upload-action:latest
