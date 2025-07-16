@@ -24,7 +24,7 @@ inputs:
 
 runs:
   using: "docker"
-  image: "arthusmeng/jira-upload-action@latest"
+  image: "docker://arthusmeng/jira-upload-action@latest"
   args:
     - ${{ inputs.jira-user }}
     - ${{ inputs.jira-api-token }}
