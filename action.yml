@@ -1,6 +1,6 @@
 name: 'Jira Vulnerability Uploader'
 description: 'Uploads Trivy vulnerability scan results to Jira as issues'
-author: 'Your Name'
+author: 'Arthus.meng'
 
 inputs:
   jira-user:
