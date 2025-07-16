@@ -1,0 +1,34 @@
+name: 'Jira Vulnerability Uploader'
+description: 'Uploads Trivy vulnerability scan results to Jira as issues'
+author: 'Your Name'
+
+inputs:
+  jira-user:
+    description: 'Jira user email'
+    required: true
+  jira-api-token:
+    description: 'Jira API token'
+    required: true
+  jira-project-key:
+    description: 'Jira project key (e.g. SEC)'
+    required: true
+  jira-server:
+    description: 'Jira server URL (e.g. https://your-domain.atlassian.net)'
+    required: true
+  jira-issue-type:
+    description: 'Type of issue to create in Jira (e.g. Bug, Task)'
+    default: 'Bug'
+  trivy-json-file:
+    description: 'Path to the Trivy JSON output file'
+    default: 'trivy-results.json'
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.jira-user }}
+    - ${{ inputs.jira-api-token }}
+    - ${{ inputs.jira-project-key }}
+    - ${{ inputs.jira-server }}
+    - ${{ inputs.jira-issue-type }}
+    - ${{ inputs.trivy-json-file }}
