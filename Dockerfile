@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY upload_to_jira.py .
 
-ENTRYPOINT ["python", "upload_to_jira.py"]
+ENTRYPOINT ["python", "/app/upload_to_jira.py"]
