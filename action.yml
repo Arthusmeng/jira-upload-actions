@@ -32,5 +32,3 @@ runs:
     - ${{ inputs.jira-server }}
     - ${{ inputs.jira-issue-type }}
     - ${{ inputs.trivy-json-file }}
-  container:
-    working-directory: /app
